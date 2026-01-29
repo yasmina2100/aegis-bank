@@ -1,0 +1,100 @@
+/* --- 1. CONFIGURATION ET RESET (Sprint 2) --- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--beige-luxe: #F5F5DC; /* Ton beige */
+--blanc-pur: #FFFFFF;
+--texte-noir: #1a1a1a;
+--font-serif: "Times New Roman", Times, serif; /* Ton écriture demandée */
+}
+
+body {
+font-family: var(--font-serif);
+background-color: var(--blanc-pur);
+color: var(--texte-noir);
+line-height: 1.6;
+}
+/* --- 2. HEADER (FLEXBOX) --- */
+.header {
+background-color: var(--blanc-pur);
+padding: 20px;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.header__container {
+display: flex;
+justify-content: space-between; /* Pour espacer burger / logo / spacer */
+align-items: center;
+}
+
+/* Menu Burger à gauche */
+.header__burger {
+display: flex;
+flex-direction: column;
+justify-content: space-between;width: 25px;
+height: 18px;
+background: transparent;
+border: none;
+cursor: pointer;
+}
+
+.header__burger-line {
+width: 100%;
+height: 1px; /* Ligne très fine pour le côté épuré */
+background-color: var(--texte-noir);
+}
+
+/* Logo au milieu */
+.header__logo {
+font-size: 1.2rem;
+font-weight: normal;
+letter-spacing: 4px; /* Espacement chic */
+}
+
+.header__spacer {
+width: 25px; /* Même largeur que le burger pour centrer le logo *//* --- 3. SECTION HERO (MOBILE FIRST) --- */
+.hero {
+height: 80vh; /* Prend presque tout l'écran */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: var(--beige-luxe);
+text-align: center;
+}
+
+.hero__title {
+font-style: italic;
+font-weight: normal;
+font-size: 2rem;
+margin-bottom: 40px;
+}
+
+.hero__cta {
+font-family: var(--font-serif);
+background-color: var(--texte-noir);
+color: var(--blanc-pur);
+border: none;
+padding: 15px 40px;
+font-size: 0.9rem;text-transform: uppercase;
+letter-spacing: 2px;
+cursor: pointer;
+}
+
+/* --- 4. FOOTER --- */
+.footer {
+padding: 40px 20px;
+text-align: center;
+background-color: var(--blanc-pur);
+}
+
+.footer__text {
+font-size: 0.7rem;
+letter-spacing: 2px;
+}
